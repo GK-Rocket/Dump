@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3> Contact</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="Email" id="Email" placeholder="Your Email" required>
+            
+            <input type="text" id="Phone" placeholder="Phone number" required>
+
+            <textarea id="message" rows="4" placeholder="How Can We help you?"></textarea>
+            
+            <button type="Submit">Send</button>
+        </form>
+
+
+
+
+    </div>
+    
+
+
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "planeflyinsky@gmail.com",
+                Password : "kandelgaurav37",
+                To : 'them@website.com',
+                From : "you@isp.com",
+                Subject : "New Contack Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+
+        }
+
+
+    </script>
+</body>
+</html>

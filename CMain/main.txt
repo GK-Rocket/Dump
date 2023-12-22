@@ -1,0 +1,30 @@
+using System;
+
+namespace CMain //foldaer name, must be same!!!!!
+{
+    class Program // dont know
+    {
+        static void Main(string[] args)
+        {
+            // the cmd or the terminal name will be change to what ever it set to
+            Console.Title = "fishnet"; 
+
+            // text color chnage
+            Console.ForegroundColor = ConsoleColor.White; // text color chnage
+            
+            Console.WriteLine("kik, whats your name dwg?");
+
+            // stores the unser input into user_name
+            string user_name = Console.ReadLine(); 
+
+            // Console.WriteLine("so " + user_name + "?");
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            
+            Console.WriteLine("test \nok"); // using \n to put line
+            Console.ReadKey();
+            
+         
+        }
+    }
+}
